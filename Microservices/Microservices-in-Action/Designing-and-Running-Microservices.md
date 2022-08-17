@@ -86,6 +86,47 @@
 
 ### Why are microservices a good choice?
 
+ - choosing microservices is not an inherent functional requirement for any given project- it always depends on what is happening with your project and where it's going
+
+#### Technical Heterogeneity Leads to Microservices
+
+ - building new offshoots of an original project may push you to adopt microservices to support that new functionality
+
+#### Development Friction Increases as Complex Systems Grow
+
+ - while microservices do not decrease the amount of complexity in a project, they do decrease the amount of unnecessary complexity
+
+#### Microservices Reduce Friction and Risk
+
+ - Microservices reduce friction and risk in the following ways:
+   1. isolating and minimizing build-time dependencies
+      - technical debt is limited to individual teams
+      - development can move in parallel
+   2. allowing developers to examine/reason about different subsystems independently
+      - developers only need to worry about the complexity of their own subsystem/service
+   3. enabling smaller, more continuous changes
+      - smaller changes are inherently less risky than larger changes
+ - microservices reduce risk and friction in the development of long-running complex systems
+ - breaking work up into smaller chunks can help ensure more sustainable progress
+
+None of this means that microservices are for everyone- it always depends on the project.
+
+## What makes microservices challenging?
+
+ - microservices increase the number of interacting parts in a system
+ - distributing functionality means distributing resposnsibility
+ - common challenges from converting to microservices include:
+   - scoping and identifying microservices is hard and requires domain knowledge
+   - boundaries and contracts between systems are difficult to iron out and hard to modify down the road
+   - different microservices have different expectations for state, reliability, and consistency of service
+   - distributing systems introduces new modes of failure
+   - it can be challenging to figure what is supposed to happen i.e. the desired state/functionality of all services
+
+### Design Challenges
+
+
+
+
 
 
 

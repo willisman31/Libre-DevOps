@@ -124,7 +124,51 @@ None of this means that microservices are for everyone- it always depends on the
 
 ### Design Challenges
 
+ - microservices should be loosely coupled when together and highly cohesive individually
+ - microservices provide isolated functionality on their own and when combined can perform complex behaviors as part of a coherent system
+ - the services should have their own lifecycles independent of the larger system
+ - misplacing service boundaries results in a less flexible application that is harder to evolve
 
+#### Scoping Microservices Requires Domain Knowledge
+
+ - Identify the independent capabilities of your overall system
+   - each microservice will handle ONE of these capabilities
+   - misunderstanding these capabilities and how they should be divided means that your microservices will not be properly formed
+ - the cosequences of incorrect placement of service boundaries include:
+   - downstream refactoring
+   - data migration
+   - service incompatibilities and missing dependencies
+ - these difficulties are not unique to microservices
+
+#### Maintaining Contracts Between Services
+
+ - since microservices are independent, but potentially reliant on one another, there should be some written agreement between those which interact so as not to break each other
+ - contracts should have the following traits:
+   - complete - define expected interactions in their entirety
+   - succinct - define only what is necessary for these particular interacting services
+   - predictable - reflect what will actually happen
+ - contracts don't need to last forever, but changing them does need to be a group process
+
+#### Microservice Applications are Designed by Teams
+
+ - teams working on microservices for the same application still need to make sure their efforts are all moving in the right direction
+
+#### Microservice Applications Are Distributed Systems
+
+ - microservices are distributed systems
+ - the following FALLACIES are common in the design of distributed systems:
+   - network is reliable
+   - no latency
+   - bandwidth is infinite
+   - no transport cost
+ - speed/reliability that exists for method calls in monolithic applications is lost in microservices
+ - application state can be difficult to determine in distributed systems
+ - it is very difficult (so difficult you probably shouldn't do it) to establish an order of operations across multiple microservices
+   - be prepared to rollback events when transactions fail
+
+### Operational Challenges
+
+ - 
 
 
 
